@@ -1,0 +1,152 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+/* VARIABLES CSS */
+:root {
+	/* Primary colors */
+	--bright-orange: hsl(31, 77%, 52%);
+	--dark-cyan: hsl(184, 100%, 22%);
+	--very-dark-cyan: hsl(179, 100%, 13%);
+
+	/* Neutral colors */
+	--paragraph: hsla(0, 0%, 100%, 0.75);
+	--light-grey: hsl(0, 0%, 95%); /* bg, h1, btn colors */
+}
+
+/* BASE SETTINGS */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-size: 1.5rem;
+	background: var(--light-grey);
+}
+h2 {
+	font-family: "Big Shoulders Display", cursive;
+}
+p,
+button {
+	font-family: "Lexend Deca", sans-serif;
+}
+
+/* =========== MAIN CSS / DESKTOP FIRST =========== */
+section {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#card-component {
+	display: flex;
+	max-width: 865px;
+	color: #fff;
+}
+
+#sedans-card {
+	background-color: var(--bright-orange);
+	border-top-left-radius: 1rem;
+	border-bottom-left-radius: 1rem;
+}
+#suvs-card {
+	background-color: var(--dark-cyan);
+}
+#luxury-card {
+	background-color: var(--very-dark-cyan);
+	border-top-right-radius: 1rem;
+	border-bottom-right-radius: 1rem;
+}
+
+.card-column {
+	padding: 4.5rem;
+}
+
+.card-column h2 {
+	font-size: 3.5rem;
+	text-transform: uppercase;
+	margin: 3rem 0;
+	color: var(--light-grey);
+}
+.card-column p {
+	font-size: 1.4rem;
+	color: var(--paragraph);
+	line-height: 2.2rem;
+	font-weight: 400;
+	padding-right: 10px;
+}
+.card-column button {
+	margin-top: 9rem;
+	padding: 1.2rem 2.5rem;
+	border-radius: 20px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background: var(--light-grey);
+	text-transform: capitalize;
+}
+.card-column button:hover {
+	color: #fff;
+	background: transparent;
+	border: 2px solid #fff;
+	padding: 1rem 2.3rem;
+}
+
+.sedans-p {
+	color: var(--bright-orange);
+}
+.suvs-p {
+	color: var(--dark-cyan);
+}
+.luxury-p {
+	color: var(--very-dark-cyan);
+}
+
+/* ============= MEDIA QUERIES / RESPONSIVE ================ */
+@media only screen and (max-width: 450px) {
+	#card-component {
+		display: flex;
+		flex-direction: column;
+		max-width: 90%;
+		margin: 10% 0;
+	}
+	#sedans-card {
+		border-top-left-radius: 1rem;
+		border-top-right-radius: 1rem;
+		border-bottom-left-radius: 0;
+	}
+	#luxury-card {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 1rem;
+		border-bottom-left-radius: 1rem;
+	}
+	.card-column button {
+		margin-top: 2.5rem;
+	}
+}
+
+@media only screen and (min-width: 451px) and (max-width: 867px) {
+	#card-component {
+		display: flex;
+		flex-direction: column;
+		max-width: 500px;
+		margin: 10% 0;
+	}
+	#sedans-card {
+		border-top-left-radius: 1rem;
+		border-top-right-radius: 1rem;
+		border-bottom-left-radius: 0;
+	}
+	#luxury-card {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 1rem;
+		border-bottom-left-radius: 1rem;
+	}
+	.card-column button {
+		margin-top: 2.5rem;
+	}
+}
